@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+        <script type="text/javascript">
+            function changech()
+            {
+        
+                 ch=document.getElementById('choice').value;
+                 if (ch==2)
+                 {
+                     document.getElementById('divid').hidden=false;
+                 }
+                 
+                 else
+                 {
+                    document.getElementById('divid').hidden=true;
+                 }
+            }
+           function chksubmit()
+           {
+            ch=document.getElementById('choice').value;
+             if (ch==3)
+             {
+               document.getElementById('loader').hidden=false;
+             }
+           }
+        </script>
+<style>
+   
+    .loading{
+			width: 300px;
+			height: 100px;
+			position: relative;
+			margin: 0 auto;
+			margin-top: 25%;
+			color: white;
+			font-size: 30px;
+			font-family: 'Quicksand', sans-serif;
+		}
+		.loading:before{
+        content: '';
+        animation: load 15s linear ;
+    }
+    .loading:before{
+        content: 'COMPLETED...!!';
+        font-size: 30px;
+    }
+
+.button {
+  background-color:black ;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+ 
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/*the container must be positioned relative:*/
+  
+
+ 
+  
+  /*style the arrow inside the select element:*/
+  .custom-select {
+
+   
+    background-color: white;
+    color: black;
+    height: 60px;
+    width:290px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+  }
+ 
+   .custom-select::selection {
+    background-color: #7adbdb; 
+    color: white
+  }  
+  /*style the items (options), including the selected item:*/
+ 
+  
+  /*style items (options):*/
+  
+  /*hide the items when the select box is closed:*/
+ .t1{
+  height: 50px;
+  width:250px;
+ }
+ ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color:black;
+  font-size: 20px;
+}
+.loading{
+  width: 300px;
+  height: 100px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 5%;
+  color: white;
+  font-size: 30px;
+  font-family: 'Quicksand', sans-serif;
+}
+.loading:before{
+    content: '';
+    animation: load 15s linear ;
+}
+.loading:before{
+    content: 'COMPLETED...!!';
+    font-size: 30px;
+}
+@keyframes load{
+  0%{content: 'STARTING';}
+  10%{content: 'loading.';}
+  20%{content: 'Loading..';}
+  30%{content: 'LOading...';}
+  40%{content: 'LOAding....';}
+  50%{content: 'LOADing.....';}
+  60%{content: 'LOADIng......';}
+  70%{content: 'LOADINg.......';}
+  80%{content: 'LOADING........';}
+  85%{content: 'COMPLETED...!!';}
+}
+  
+  
+</style>
+</head>
+
+<body style="background-color:rgb(89, 143, 218)">
+    
+    <center>
+ 
+      <div style="background-color:rgba(23, 80, 139, 0.247)">
+    <br>
+    <br>
+<form   onsubmit="chksubmit()" id="main" action="/abc" method="post">
+
+ 
+<font style="font-size:60px;"><br>
+  Attendance Managment System with face recognition </font><br><br>
+</div>
+<hr>
+
+
+<h1>Select one option from below</h1><br>
+<select  class="custom-select" id="choice" name="choice" onchange="changech()">
+    <option value=1> 1 for check camera </option>
+    <option value=2>2 for capture face </option>
+    <option value=3>3 for train image </option>
+    <option value=4>4 for recognize and mark attendence </option>
+</select>
+<br><br>  
+<div id="loader" class="loading" hidden></div>
+<div id="divid" hidden>
+  
+<input class="t1" placeholder="Enter Name" name="txtname" type="text" style="height:25px"><br><br>
+<input class="t1"  placeholder="Enter Id" name="txtid" type="text" style="height:25px"><br><br>
+</div>
+<br>
+<input type="submit" class="button" value="Submit">
+
+</center>
+</form>
+
+<!-- <button class="button">Button</button>
+<input type="button" class="button" value="Input Button"> -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
